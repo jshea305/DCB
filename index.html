@@ -22,8 +22,8 @@
   <style>
     /* CSS Variables & Global Reset */
     :root {
-      --primary-dark: #0b0c16;
-      --secondary-dark: #1a1b52;
+      --primary-dark: #0a0b14;
+      --secondary-dark: #151636;
       --accent-color: #d5d5d5;
       --highlight: #e6b800;
       --text-light: #ffffff;
@@ -44,11 +44,12 @@
 
     body {
       font-family: var(--font-body);
-      /* Moody concert stage background effect */
+      /* Base dark tone mixed with a subtle repeating SVG geometric/dot pattern */
       background-color: var(--primary-dark);
       background-image: 
-        radial-gradient(circle at 50% 15%, rgba(230, 184, 0, 0.06) 0%, transparent 45%),
-        linear-gradient(to bottom, rgba(11, 12, 22, 0.85), rgba(5, 5, 10, 0.98));
+        radial-gradient(circle at 50% 10%, rgba(230, 184, 0, 0.08) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(to bottom, #0a0b14, #05060a);
       color: var(--text-light);
       line-height: 1.6;
     }
@@ -67,7 +68,7 @@
     header {
       position: sticky;
       top: 0;
-      background-color: rgba(11, 12, 22, 0.95);
+      background-color: rgba(10, 11, 20, 0.95);
       backdrop-filter: blur(5px);
       z-index: 1000;
       border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -130,7 +131,7 @@
       overflow: hidden;
       border-radius: 8px;
       background-color: #000;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
       position: relative;
     }
 
@@ -176,14 +177,14 @@
     /* About Section */
     .about-section {
       text-align: center;
-      background-color: rgba(26, 27, 82, 0.4);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background-color: rgba(21, 22, 54, 0.65);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
       padding: 3rem 2rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
     .about-subtitle {
@@ -252,13 +253,15 @@
     }
 
     .show-item {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(4px);
       padding: 1rem 1.5rem;
       border-radius: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-left: 4px solid var(--highlight);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .show-details {
@@ -277,12 +280,13 @@
 
     /* Contact & Booking Section */
     .contact-section {
-      background-color: rgba(33, 13, 26, 0.6);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background-color: rgba(33, 13, 26, 0.75);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
       padding: 3rem 2rem;
       text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
     .contact-form {
@@ -309,7 +313,7 @@
       padding: 0.8rem;
       border-radius: 6px;
       border: 1px solid rgba(255,255,255,0.2);
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
       color: #fff;
       font-family: var(--font-body);
     }
@@ -329,7 +333,7 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: #05050a;
+      background-color: #040508;
       border-top: 1px solid rgba(255,255,255,0.05);
       color: var(--text-muted);
       font-size: 0.9rem;
