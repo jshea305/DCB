@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DownCity Band | Premier Wedding & Event Band in Providence, RI</title>
+  
+  <!-- SEO & Open Graph Tags -->
+  <meta name="description" content="DownCity Band brings high-energy live music to weddings and private events across Rhode Island and New England. Book our 8-piece ensemble today!">
+  <meta property="og:site_name" content="DOWN CITY BAND">
+  <meta property="og:title" content="DownCity Band | Premier Wedding & Event Band">
+  <meta property="og:description" content="Premier live music entertainment in Providence, RI. High energy, versatile setlists, and packed dance floors for weddings and special events.">
+  <meta property="og:image" content="logo2_1_orig.JPG">
+  <meta property="og:url" content="https://www.downcityband.com/">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* CSS Variables & Global Reset */
+    :root {
+      --primary-dark: #0d0429;
+      --secondary-dark: #1a1b52;
+      --accent-color: #d5d5d5;
+      --highlight: #e6b800;
+      --text-light: #ffffff;
+      --text-muted: #cccccc;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--highlight);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(13, 4, 41, 0.95);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-light);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--highlight);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: radial-gradient(circle, rgba(26,27,82,1) 0%, rgba(13,4,41,1) 100%);
+    }
+
+    .hero img.logo-img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+
+   .hero-slider {
+      max-width: 800px;
+      height: 450px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #000; /* Fills empty side space with solid black */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 15s infinite;
+    }
+
+    .slides img {
+      width: 33.333%;
+      height: 100%;
+      object-fit: contain; /* Keeps the entire photo visible without cutting off faces */
+      object-position: center;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      30% { transform: translateX(0%); }
+      33% { transform: translateX(-33.333%); }
+      63% { transform: translateX(-33.333%); }
+      66% { transform: translateX(-66.666%); }
+      96% { transform: translateX(-66.666%); }
+      100% { transform: translateX(0%); }
+    }
+
+    /* Sections Shared Styles */
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    /* About Section */
+    .about-section {
+      text-align: center;
+      background-color: var(--secondary-dark);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .about-subtitle {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    .about-content p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .about-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--text-light);
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .btn-container {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background-color: var(--highlight);
+      color: #000;
+      font-weight: 700;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* Shows Section */
+    .shows-section {
+      text-align: center;
+    }
+
+    .shows-subtitle {
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+    }
+
+    .shows-list {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .show-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid var(--highlight);
+    }
+
+    .show-details {
+      text-align: left;
+    }
+
+    .show-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .show-date {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Contact & Booking Section */
+    .contact-section {
+      background-color: #210d1a;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      font-family: var(--font-body);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--highlight);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #060212;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      font-size: 1.5rem;
+      color: var(--text-light);
+    }
+
+    .social-links a:hover {
+      color: var(--highlight);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .show-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      .show-details {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav>
+      <div class="nav-logo">DOWNCITY BAND</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shows">Upcoming Shows</a></li>
+        <li><a href="#contact">Book Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <!-- Main Logo at Top -->
+    <img src="logo2_1_orig.JPG" alt="DownCity Band Logo" class="logo-img">
+    
+    <!-- Slideshow Below Logo -->
+    <div class="hero-slider">
+  <div class="slides">
+    <img src="screenshot-20_orig.png" alt="DownCity Band Stage Performance">
+    <img src="screenshot-21_orig.png" alt="DownCity Band Group Selfie">
+    <img src="logo2_1_orig.png" alt="DownCity Band Logo">
+  </div>
+</div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-section">
+      <h2 class="section-title">About DownCity Band!!</h2>
+      <p class="about-subtitle">DownCity Band brings the energy, talent, and fun to make your wedding unforgettable—one packed dance floor at a time.</p>
+      
+      <div class="about-content">
+        <p><strong>DownCity Band</strong> is a premier live music entertainment service based in Providence, Rhode Island, specializing in unforgettable wedding celebrations. For more than 10 years, our eight-member ensemble—featuring some of the area’s top vocalists and musicians—has been filling dance floors, inspiring sing-alongs, and turning special moments into lifelong memories.</p>
+
+        <h3>Our Music</h3>
+        <p>From soulful blues and timeless classics to country, hip-hop, pop, and rock anthems, our repertoire spans a wide range of genres to make sure there’s something for everyone. Whether you want elegant instrumentals for your ceremony, a heartfelt first dance, or high-energy hits to keep the party going all night, we’ll deliver the perfect soundtrack for your big day. And if you have a special request, we’re happy to learn new songs to make your celebration uniquely yours.</p>
+
+        <h3>More Than Just a Band</h3>
+        <p>DownCity Band doesn’t just perform—we create an experience. Along with live music, we can provide music during breaks, act as your MC, and ensure that every transition of your celebration flows seamlessly. Our goal is to keep the energy high and your planning stress-free.</p>
+
+        <h3>Why Couples Love Us</h3>
+        <p>Couples consistently rave about our <strong>enthusiasm, professionalism, and easygoing style</strong>. Planning is simple, communication is clear, and when the big day comes, we bring the energy that gets everyone on the dance floor. It’s no surprise we were named <strong>2019 Best of Newport County</strong>—an honor that reflects both our talent and our commitment to customer service.</p>
+
+        <h3>See Us in Action</h3>
+        <p>Experience the joy and energy we bring to every performance, then imagine that same magic creating unforgettable memories at your own event.</p>
+      </div>
+
+      <div class="btn-container">
+        <a href="#contact" class="btn">Book Now!!</a>
+        <a href="https://www.facebook.com/downcityband" target="_blank" class="btn">Facebook</a>
+        <a href="https://www.weddingwire.com/biz/downcity-band-providence/aa03d1b0659ddee2.html" target="_blank" class="btn">Wedding Wire</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shows Section -->
+  <section id="shows" class="shows-section">
+    <h2 class="section-title">Upcoming Shows</h2>
+    <p class="shows-subtitle">Click on public event names for venue map & details</p>
+
+    <div class="shows-list">
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/5/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/12/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/19/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/26/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
+        </div>
+        <div class="show-date">11/28/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
+        </div>
+        <div class="show-date">2/27/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A" target="_blank">Narragansett Cafe</a></div>
+        </div>
+        <div class="show-date">5/22/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/X6i8mVcZjs3dSJBA8" target="_blank">St. Barnabas Festival</a></div>
+        </div>
+        <div class="show-date">6/11/2027</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-section">
+      <h2 class="section-title">Get In Touch</h2>
+      <p>Ready to lock in the music for your date? Send us a message or request information below.</p>
+
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" class="form-control" placeholder="yourname@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Event Details / Message</label>
+          <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your event date, location, and vision..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="opt-in" required>
+          <label for="opt-in" style="margin-bottom:0;">Subscribe to newsletter updates</label>
+        </div>
+
+        <button type="submit" class="btn">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/downcityband" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#contact" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; DownCity Band. All Rights Reserved. Based in Providence, RI.</p>
+  </footer>
+
+</body>
+</html>
