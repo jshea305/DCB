@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="DOWN CITY BAND">
   <meta property="og:title" content="DownCity Band | Premier Wedding & Event Band">
   <meta property="og:description" content="Premier live music entertainment in Providence, RI. High energy, versatile setlists, and packed dance floors for weddings and special events.">
-  <meta property="og:image" content="logo2_1_orig.jpg">
+  <meta property="og:image" content="logo2_1_orig.JPG">
   <meta property="og:url" content="https://www.downcityband.com/">
 
   <!-- Google Fonts & Font Awesome Icons -->
@@ -125,7 +125,7 @@
       margin: 0 auto;
       overflow: hidden;
       border-radius: 8px;
-      background-color: #000;
+      background-color: #000; /* Fills empty side space with solid black */
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       position: relative;
     }
@@ -140,7 +140,7 @@
     .slides img {
       width: 33.333%;
       height: 100%;
-      object-fit: contain;
+      object-fit: contain; /* Keeps the entire photo visible without cutting off faces */
       object-position: center;
     }
 
@@ -317,25 +317,6 @@
       gap: 0.5rem;
     }
 
-    /* Testimonials Section & Framing Styles */
-    .testimonials-section {
-      background-color: rgba(26, 27, 82, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 3rem 2rem;
-      margin: 2rem auto;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .review-card {
-      background: rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
     /* Footer */
     footer {
       text-align: center;
@@ -392,7 +373,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#shows">Upcoming Shows</a></li>
         <li><a href="#contact">Book Us</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
       </ul>
     </nav>
   </header>
@@ -400,16 +380,16 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <!-- Main Logo at Top -->
-    <img src="logo2_1_orig.jpg" alt="DownCity Band Logo" class="logo-img">
+    <img src="logo2_1_orig.JPG" alt="DownCity Band Logo" class="logo-img">
     
     <!-- Slideshow Below Logo -->
     <div class="hero-slider">
-      <div class="slides">
-        <img src="screenshot-20_orig.png" alt="DownCity Band Stage Performance">
-        <img src="screenshot-21_orig.png" alt="DownCity Band Group Selfie">
-        <img src="logo2_1_orig.jpg" alt="DownCity Band Logo">
-      </div>
-    </div>
+  <div class="slides">
+    <img src="screenshot-20_orig.png" alt="DownCity Band Stage Performance">
+    <img src="screenshot-21_orig.png" alt="DownCity Band Group Selfie">
+    <img src="logo2_1_orig.png" alt="DownCity Band Logo">
+  </div>
+</div>
   </section>
 
   <!-- About Section -->
@@ -530,97 +510,6 @@
 
         <button type="submit" class="btn">Submit Inquiry</button>
       </form>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials-section">
-    <h2 class="section-title">Wedding Testimonials</h2>
-    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
-      See our wedding testimonials below or check them out on <br />
-      <u><a href="https://www.weddingwire.com/reviews/downcityband-providence/aa03d1b0659ddee2.html" target="_blank">Wedding Wire / The Knot</a></u>
-    </p>
-
-    <!-- Review Badges / Images -->
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <img src="7-11-2026_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="7-6-2026_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="t4_orig.jpg" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="t2_orig.jpg" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="t1_orig.jpg" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="dcp-8-7-2025_orig.jpg" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="dcb-7-20-2025-joe_orig.jpg" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="7-20-2025_orig.jpg" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="screenshot-2025-07-07-185817_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="screenshot-2025-07-07-185838_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="screenshot-2025-07-07-190245_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="screenshot-2025-07-07-190458_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-      <img src="screenshot-2025-07-07-190507_orig.png" alt="Review Badge" style="max-width:100%; height:auto; margin: 10px 0;">
-    </div>
-
-    <!-- Review Items inside framed cards -->
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5"><span style="font-weight:600">Beth W.</span> Sent on 09/26/2023<br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />Couldn't Suggest DownCity Band More!<br />I couldn't suggest DownCity Band more for your wedding or event!! While looking for wedding bands we went to see them play at a bar in RI and from the first song (Respect - Aretha Franklin) we were sold! Such great musicians/singers and so much fun energy! Dave was super helpful and great to work with while planning and every guest at our wedding had nothing but compliments. They had everyone on the dance floor from start to finish and were truly the highlight of our rainy beach wedding! We want to have another event just to have DownCity play again! You will not regret hiring this band!</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5">Meghan H. Sent on 09/16/2024</font><br />
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span><br /><br />
-        <font color="#d5d5d5">Not only a great band, a true event partner!!<br /><br />Dave and the whole band are amazing from the first email intro, to the last dance. They worked with me on a set list, learned a song that was very special to my fiance, and when my caterer totally messed up the timing of everything, they were there with me in the moment finding a solution. The band played songs everyone loved, and all of my guests are still raving about how wonderful they were! I cannot recommend Down City Band enough!! As I said, they were true partners with me at my wedding, and I am and will be, forever grateful to them for making my wedding so magical!!</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5"><span style="font-weight:600">Eva C.</span> Sent on 10/04/2023<br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />The best!<br />DownCity Band was AMAZING to work with. They were so great with communication leading up to the wedding which really put me at ease. And then at the wedding they were INCREDIBLE! Our guests have nonstop been talking about the music and how good they were. The dance floor was packed the entire night, I couldn’t be happier that I worked with them!</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5">Mercedes W. <span style="font-weight:400">Sent on 07/09/2023</span><br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />DownCity Band is an amazing band to hire for your wedding! They have an affordable package for your ceremony, cocktail hour, and reception. They also will learn any amount of specific songs that you’re interested in for first dances! Dave was a great communicator and awesome to work with. We highly suggest DownCity band! They will keep your guests dancing all night with their variety of music.</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5">Samantha G. <span style="font-weight:400">Sent on 06/05/2023</span><br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />Best band ever<br />Thank you so much to Down City Band for making our wedding the best night of our lives! They played the best music, kept everyone on the dance floor the entire night, and were so fun! We got so many compliments throughout the night about the band and honestly couldn’t have imagined anything better. Dave was also amazing to work with throughout the planning process. Fantastic communication and made everything so easy for us!</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5">Betsy K. <span style="font-weight:400">Sent on 10/17/2023</span><br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />Amazing Band!!<br />My wife and I hired DownCity Band simply because they were one of two bands on our venue’s “Approved Vendors” list. We looked them up on WeddingWire and saw their good reviews, but were admittedly a little nervous about them since we hadn’t heard them play before. All of that concern went out the window as soon as they played our entrance song, Dancing Queen by ABBA. They were fantastic!! People were coming up to us all night saying how great the band was. The dance floor was packed all night long as they played one great song after another. Their energy was electric, and they really made for a fun, memorable evening for everyone there. We can’t recommend them highly enough. And they’re so affordable!!! Worth absolutely every penny.</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5">Elizabeth J. Married on 12/10/2022<br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />Look no further!<br />My friends and family suggested DownCity for our wedding band and boy, am I happy they did! The months prior to the wedding Dave was amazing to work with and answered any questions I had! At the wedding, DownCity showed out in every way! They prioritized playing songs we chose as “must plays” and kept the party going! If they didn’t know a song, they were able to play the recording easily. Their ability to interact with the guests is top notch; they even came and danced with us! I can’t say enough good things about DownCity and highly recommend them for your wedding or event!!</font>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="paragraph" style="text-align:center;">
-        <font color="#d5d5d5">Eloise H. <span style="font-weight:400">Sent on 10/06/2023</span><br /></font>
-        <span style="color:rgb(213, 213, 213)">5 out of 5 rating 5.0</span>
-        <font color="#d5d5d5"><br /><br />The best decision we made at our wedding<br />I looked around halfway through the night, and every single person at our wedding of about 130 people was on the dance floor. Downcity Band was incredible, from their energy, vocals to their instrumentals. They were so great to work with leading up to the wedding and also did an incredible job on our instrumental ceremony music. I cannot recommend them enough. Book them before they become the best wedding band in all of New England because it's going to happen. Thank you Downcity band for such an incredible night.</font>
-      </div>
     </div>
   </section>
 
