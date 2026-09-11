@@ -322,46 +322,21 @@
       box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     }
 
-    .contact-form {
-      max-width: 500px;
-      margin: 2rem auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
+    .contact-email-display {
+      margin-top: 2rem;
     }
 
-    .form-group {
-      text-align: left;
+    .email-link {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--highlight);
+      word-break: break-all;
+      transition: color 0.3s ease;
     }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 0.9rem;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.2);
-      background: rgba(0,0,0,0.5);
+    .email-link:hover {
       color: #fff;
-      font-family: var(--font-body);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: var(--highlight);
-      box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-    }
-
-    .checkbox-group {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      text-decoration: underline;
     }
 
     /* Footer */
@@ -408,6 +383,9 @@
       .show-details {
         text-align: center;
       }
+      .email-link {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -436,7 +414,7 @@
       <div class="slides">
         <img src="screenshot-20_orig.png" alt="DownCity Band Stage Performance">
         <img src="screenshot-21_orig.png" alt="DownCity Band Group Selfie">
-       
+        <img src="logo2_1_orig.jpg" alt="DownCity Band Logo">
       </div>
     </div>
   </section>
@@ -543,26 +521,11 @@
   <section id="contact">
     <div class="contact-section">
       <h2 class="section-title">Get In Touch</h2>
-      <p>Ready to lock in the music for your date? Send us a message or request information below.</p>
-
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" class="form-control" placeholder="yourname@example.com" required>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Event Details / Message</label>
-          <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your event date, location, and vision..."></textarea>
-        </div>
-
-        <div class="form-group checkbox-group">
-          <input type="checkbox" id="opt-in" required>
-          <label for="opt-in" style="margin-bottom:0;">Subscribe to newsletter updates</label>
-        </div>
-
-        <button type="submit" class="btn">Submit Inquiry</button>
-      </form>
+      <p>Ready to lock in the music for your date? Reach out to us directly via email below.</p>
+      
+      <div class="contact-email-display">
+        <a href="mailto:davidwilson@downcityband.com" class="email-link"><i class="fas fa-envelope"></i> davidwilson@downcityband.com</a>
+      </div>
     </div>
   </section>
 
@@ -570,12 +533,10 @@
   <footer>
     <div class="social-links">
       <a href="https://www.facebook.com/downcityband" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#contact" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:davidwilson@downcityband.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
     </div>
     <p>&copy; DownCity Band. All Rights Reserved. Based in Providence, RI.</p>
   </footer>
 
-</body>
-</html>
 </body>
 </html>
