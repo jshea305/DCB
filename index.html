@@ -630,6 +630,20 @@
     </div>
     <p>&copy; DownCity Band. All Rights Reserved. Based in Providence, RI.</p>
   </footer>
+<script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Optional: Close menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
