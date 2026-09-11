@@ -422,6 +422,41 @@
         font-size: 1.1rem;
       }
     }
+    /* Hide the toggle button by default on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(31, 12, 31, 0.98);
+    backdrop-filter: blur(8px);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+  }
+
+  /* This class will be toggled via JavaScript */
+  .nav-links.active {
+    display: flex;
+  }
+}
   </style>
 </head>
 <body>
@@ -429,6 +464,11 @@
   <!-- Header & Navigation -->
   <header>
     <nav>
+      <div class="nav-logo">DOWNCITY BAND</div>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links">
       <div class="nav-logo">DOWNCITY BAND</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
