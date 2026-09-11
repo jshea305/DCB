@@ -22,7 +22,7 @@
   <style>
     /* CSS Variables & Global Reset */
     :root {
-      --primary-dark: #0d0429;
+      --primary-dark: #0b0c16;
       --secondary-dark: #1a1b52;
       --accent-color: #d5d5d5;
       --highlight: #e6b800;
@@ -44,7 +44,11 @@
 
     body {
       font-family: var(--font-body);
+      /* Moody concert stage background effect */
       background-color: var(--primary-dark);
+      background-image: 
+        radial-gradient(circle at 50% 15%, rgba(230, 184, 0, 0.06) 0%, transparent 45%),
+        linear-gradient(to bottom, rgba(11, 12, 22, 0.85), rgba(5, 5, 10, 0.98));
       color: var(--text-light);
       line-height: 1.6;
     }
@@ -63,7 +67,7 @@
     header {
       position: sticky;
       top: 0;
-      background-color: rgba(13, 4, 41, 0.95);
+      background-color: rgba(11, 12, 22, 0.95);
       backdrop-filter: blur(5px);
       z-index: 1000;
       border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -108,7 +112,7 @@
     .hero {
       text-align: center;
       padding: 3rem 1rem;
-      background: radial-gradient(circle, rgba(26,27,82,1) 0%, rgba(13,4,41,1) 100%);
+      background: transparent;
     }
 
     .hero img.logo-img {
@@ -119,14 +123,14 @@
       display: block;
     }
 
-   .hero-slider {
+    .hero-slider {
       max-width: 800px;
       height: 450px;
       margin: 0 auto;
       overflow: hidden;
       border-radius: 8px;
-      background-color: #000; /* Fills empty side space with solid black */
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      background-color: #000;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
       position: relative;
     }
 
@@ -140,7 +144,7 @@
     .slides img {
       width: 33.333%;
       height: 100%;
-      object-fit: contain; /* Keeps the entire photo visible without cutting off faces */
+      object-fit: contain;
       object-position: center;
     }
 
@@ -172,12 +176,14 @@
     /* About Section */
     .about-section {
       text-align: center;
-      background-color: var(--secondary-dark);
+      background-color: rgba(26, 27, 82, 0.4);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       padding: 3rem 2rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
     .about-subtitle {
@@ -246,7 +252,7 @@
     }
 
     .show-item {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       padding: 1rem 1.5rem;
       border-radius: 8px;
       display: flex;
@@ -271,7 +277,9 @@
 
     /* Contact & Booking Section */
     .contact-section {
-      background-color: #210d1a;
+      background-color: rgba(33, 13, 26, 0.6);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       padding: 3rem 2rem;
       text-align: center;
@@ -301,7 +309,7 @@
       padding: 0.8rem;
       border-radius: 6px;
       border: 1px solid rgba(255,255,255,0.2);
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.4);
       color: #fff;
       font-family: var(--font-body);
     }
@@ -321,7 +329,7 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: #060212;
+      background-color: #05050a;
       border-top: 1px solid rgba(255,255,255,0.05);
       color: var(--text-muted);
       font-size: 0.9rem;
@@ -384,12 +392,12 @@
     
     <!-- Slideshow Below Logo -->
     <div class="hero-slider">
-  <div class="slides">
-    <img src="screenshot-20_orig.png" alt="DownCity Band Stage Performance">
-    <img src="screenshot-21_orig.png" alt="DownCity Band Group Selfie">
-    <img src="logo2_1_orig.png" alt="DownCity Band Logo">
-  </div>
-</div>
+      <div class="slides">
+        <img src="screenshot-20_orig.png" alt="DownCity Band Stage Performance">
+        <img src="screenshot-21_orig.png" alt="DownCity Band Group Selfie">
+        <img src="logo2_1_orig.png" alt="DownCity Band Logo">
+      </div>
+    </div>
   </section>
 
   <!-- About Section -->
@@ -485,9 +493,10 @@
       </div>
     </div>
   </section>
-<p style="text-align: center; margin-top: 2rem;">
-  <a href="https://www.weddingwire.com/reviews/downcityband-providence/aa03d1b0659ddee2.html" target="_blank" class="btn">View All Reviews on WeddingWire</a>
-</p>
+
+  <p style="text-align: center; margin-top: 2rem;">
+    <a href="https://www.weddingwire.com/reviews/downcityband-providence/aa03d1b0659ddee2.html" target="_blank" class="btn">View All Reviews on WeddingWire</a>
+  </p>
   
   <!-- Contact Section -->
   <section id="contact">
