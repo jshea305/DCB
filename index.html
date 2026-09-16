@@ -522,6 +522,18 @@
     max-width: 200px;
   }
 }
+    .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space between icon and text */
+}
+
+.btn-icon {
+  height: 20px; /* adjust height to match text size */
+  width: auto;
+  object-fit: contain;
+}
   </style>
 </head>
 <body>
@@ -595,11 +607,18 @@
       </div>
 
       <div class="btn-container">
-        <a href="#contact" class="btn">Book Now!!</a>
-        <a href="https://www.facebook.com/downcityband" target="_blank" class="btn">Facebook</a>
-        <a href="https://www.weddingwire.com/biz/downcity-band-providence/aa03d1b0659ddee2.html" target="_blank" class="btn">Wedding Wire</a>
-      </div>
-    </div>
+  <a href="#contact" class="btn">Book Now!!</a>
+  
+  <a href="https://www.facebook.com/downcityband" target="_blank" class="btn">
+    <img src="Facebook_logo_(square).png" alt="Facebook" class="btn-icon">
+    Facebook
+  </a>
+  
+  <a href="https://www.weddingwire.com/biz/downcity-band-providence/aa03d1b0659ddee2.html" target="_blank" class="btn">
+    <img src="png-transparent-weddingwire-logo-landscape-review-platforms-logos-thumbnail.png" alt="WeddingWire" class="btn-icon">
+    Wedding Wire
+  </a>
+</div>
   </section>
 
   <!-- Shows Section -->
