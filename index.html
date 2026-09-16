@@ -534,6 +534,26 @@
   width: auto;
   object-fit: contain;
 }
+
+    .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-icon {
+  height: 1.5em; /* Scales dynamically with button text size */
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Quick fix for pseudo-transparent JPG/PNG checkerboard backgrounds */
+.btn-icon.mix-blend {
+  mix-blend-mode: multiply;
+}
   </style>
 </head>
 <body>
@@ -606,7 +626,7 @@
         <p>Experience the joy and energy we bring to every performance, then imagine that same magic creating unforgettable memories at your own event.</p>
       </div>
 
-      <div class="btn-container">
+     <div class="btn-container">
   <a href="#contact" class="btn">Book Now!!</a>
   
   <a href="https://www.facebook.com/downcityband" target="_blank" class="btn">
@@ -615,7 +635,7 @@
   </a>
   
   <a href="https://www.weddingwire.com/biz/downcity-band-providence/aa03d1b0659ddee2.html" target="_blank" class="btn">
-    <img src="png-transparent-weddingwire-logo-landscape-review-platforms-logos-thumbnail.png" alt="WeddingWire" class="btn-icon">
+    <img src="png-transparent-weddingwire-logo-landscape-review-platforms-logos-thumbnail.png" alt="WeddingWire" class="btn-icon mix-blend">
     Wedding Wire
   </a>
 </div>
