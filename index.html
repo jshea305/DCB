@@ -456,7 +456,7 @@
     display: flex;
   }
 }
- .hero-container {
+.hero-container {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -486,11 +486,12 @@
   z-index: 2;
 }
 
+/* Updated to position content at the bottom */
 .hero-content {
   position: absolute;
-  top: 50%;
+  bottom: 40px;          /* Positions content 40px from the bottom edge */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* Keeps content horizontally centered */
   z-index: 3;
   text-align: center;
   width: 90%;
@@ -513,20 +514,17 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Mobile font adjustment */
+/* Mobile adjustment */
 @media (max-width: 768px) {
+  .hero-content {
+    bottom: 25px; /* Slightly tighter spacing for mobile screens */
+  }
   .hero-text {
     font-size: 1.15rem;
   }
   .logo-img {
     max-width: 200px;
   }
-}
-    .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* space between icon and text */
 }
 
 .btn-icon {
@@ -583,11 +581,9 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <img src="logo2_1_orig.jpg" alt="DownCity Band Logo" class="logo-img">
-    <h1 class="hero-text">
-      We keep the dance floor packed and the party going all night. DownCity Band brings the high-energy live sound to make your wedding unforgettable.
-    </h1>
+    <h1 class="hero-title">Down City Band</h1>
   </div>
+</div>
 </div>
   <section id="home" class="hero">
     <!-- Main Logo at Top -->
