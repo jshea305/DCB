@@ -575,3 +575,7 @@
   color: var(--text-light);
   text-align: left;
 }
+
+.testimonial-card h3 {
+  color: #f4c430 !important;
+}
