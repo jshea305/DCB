@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title | DownCity Band</title>
+  <title>Meet the Band | DownCity Band</title>
   
   <!-- Global Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- SEO & Open Graph Tags -->
-  <meta name="description" content="DownCity Band brings high-energy live music to weddings and private events across Rhode Island and New England.">
+  <meta name="description" content="Meet the talented musicians and vocalists behind DownCity Band, Providence RI's premier live wedding and event ensemble.">
   <meta property="og:site_name" content="DOWN CITY BAND">
-  <meta property="og:title" content="DownCity Band | Premier Wedding & Event Band">
-  <meta property="og:description" content="Premier live music entertainment in Providence, RI. High energy, versatile setlists, and packed dance floors.">
+  <meta property="og:title" content="Meet the Band | DownCity Band">
+  <meta property="og:description" content="Meet our 8-member ensemble featuring top New England vocalists and musicians.">
   <meta property="og:image" content="media/logo2_1_orig.png">
-  <meta property="og:url" content="https://www.downcityband.com/">
+  <meta property="og:url" content="https://www.downcityband.com/band.html">
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
       </button>
       <ul class="nav-links">
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="band.html">Meet the Band</a></li>
+        <li><a href="band.html" class="active">Meet the Band</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="index.html#shows">Upcoming Shows</a></li>
@@ -42,9 +42,72 @@
     </nav>
   </header>
 
-  <!-- Main Content Area -->
+  <!-- Main Content -->
   <main>
-    <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
+    <section class="band-section">
+      <div class="container" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
+        
+        <img src="media/dcb-logo_orig.jpg" alt="DownCity Band Logo" class="logo-img" style="max-width: 300px; margin-bottom: 1.5rem;">
+        <h1 class="section-title">Meet The Band</h1>
+
+        <!-- Dan Reynolds -->
+        <article class="bio-card" style="margin-top: 3rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Dan Reynolds - Sax</h2>
+          <img src="media/dan-bio.jpg" alt="Dan Reynolds - Sax" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>In 1992 Dan Reynolds was an alto saxophonist in the “Walt Disney World All-American College Jazz Band” in Orlando, Florida. During this tenure he performed and attended clinics with jazz artists such as Tom Scott, Arturo Sandoval, Pete Christlieb and Maynard Ferguson. In 1993 he performed for various shows in Busch Gardens, Williamsburg, Virginia. From 1993 to 2002 he served as alto and tenor saxophonist, arranger and composer with “Steve Smith and The Nakeds” performing with such popular artists as Clarence Clemons, Nils Lofgren, John Cafferty, Michael Antunes, Al Cooper, and Gary U.S. Bonds. “The Nakeds” performed throughout the United States and Canada, including a performance for President Bill Clinton in 1994. Dan completed graduate studies at The University of Rhode Island for saxophone performance and has performed with numerous premier New England groups.</p>
+        </article>
+
+        <!-- Dave Wilson -->
+        <article class="bio-card" style="margin-top: 4rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Dave Wilson - Bass</h2>
+          <img src="media/dw-bio.jpg" alt="Dave Wilson - Bass" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Dave has been playing bass since the age of 10. He was hooked on the instrument after hearing Verdine White of Earth, Wind & Fire. That particular feel and groove shaped his approach for years to come. In addition to Verdine, David is heavily influenced by Anthony Jackson, Abe Laboriel, and Maurice Fitzgerald. Dave spent several years playing bass on the Boston music scene for multiple singers and musicians across a variety of genres, including touring the southern states with New Day, before bringing his groove to Rhode Island.</p>
+        </article>
+
+        <!-- Paul Duquette -->
+        <article class="bio-card" style="margin-top: 4rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Paul Duquette - Keys</h2>
+          <img src="media/pd-bio.jpg" alt="Paul Duquette - Keys" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Paul ‘Captain Fingers’ Duquette is a Berklee College of Music graduate and has been an in-demand working musician for more than 20 years. His styles range from jazz and classical to oldies, funk, and blues. Paul is an integral part of DownCity as he can perform ceremonial music, cocktail hour sets, and high-energy reception arrangements. Outside of the live performance scene, Paul teaches private piano lessons and serves as a cathedral organist.</p>
+        </article>
+
+        <!-- Jeff Shea -->
+        <article class="bio-card" style="margin-top: 4rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Jeff Shea - Guitar</h2>
+          <img src="media/js-bio1.jpg" alt="Jeff Shea - Guitar" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Jeff Shea has performed with numerous bands at both the national and local levels for over 35 years. On the national scene, Jeff has performed with Little Anthony, The Marvelettes, The Coasters, and The Drifters. Locally, he has performed with many established New England groups across funk, disco, and rock genres. Jeff formally studied guitar at the Berklee College of Music, where he earned a Bachelor of Arts in music.</p>
+        </article>
+
+        <!-- Bob Maddalena -->
+        <article class="bio-card" style="margin-top: 4rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Bob Maddalena - Drums</h2>
+          <img src="media/bm-bio.jpg" alt="Bob Maddalena - Drums" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Bob has worked the club scene, college circuits, and national events for over 35 years. Formerly a member of the legendary rock band Strutt, New England's premier oldies band Reminisce, and Orchestra Romanza, Bob has shared the stage with and opened for national acts such as Aerosmith, Loverboy, The Temptations, Little Richard, and Frankie Valli. Known for his diverse style, Bob supplies the solid backbeat for DownCity Band.</p>
+        </article>
+
+        <!-- Maceo Eberhart -->
+        <article class="bio-card" style="margin-top: 4rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Maceo Eberhart - Vocals</h2>
+          <img src="media/mace3-bio_orig.jpg" alt="Maceo Eberhart - Vocals" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Maceo started out singing solo at weddings, fundraisers, and live events, but it was not until hearing Otis Redding that he realized he wanted to sing professionally. In 2012, Maceo became the lead vocalist for The Ghost Tones. His soulful voice, warm stage presence, and magnetic energy consistently keep dance floors packed. His major musical influences include Otis Redding, The Isley Brothers, and War.</p>
+        </article>
+
+        <!-- Jessica Tracy -->
+        <article class="bio-card" style="margin-top: 4rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Jessica Tracy - Vocals</h2>
+          <img src="media/jess2.jpg" alt="Jessica Tracy - Vocals" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Jess started singing at the age of four at St. Mark's Church in Riverside, RI. At age 6, her father taught her recorder, keyboard, and singing in their family bluegrass band. Her performance background spans choirs, musicals, and professional New England circuits. Audience members love Jessica's powerful vocal range and infectious stage energy.</p>
+        </article>
+
+        <!-- Don Chilton -->
+        <article class="bio-card" style="margin-top: 4rem; margin-bottom: 3rem;">
+          <h2 style="color: var(--highlight); margin-bottom: 1rem;">Don Chilton - Trumpet</h2>
+          <img src="media/don-bio.jpg" alt="Don Chilton - Trumpet" style="max-width: 250px; border-radius: 8px; margin-bottom: 1rem;">
+          <p>Don Chilton is a retired Navy Musician with a distinguished 26-year career traveling worldwide to over 42 countries as a trumpeter, vocalist, and bandleader. Don serves as band director and music teacher for Newport Public Schools and has performed at the Newport Jazz Festival, alongside legendary acts like The Temptations. Don also proudly serves his nation as a bugler with the RI Military Funeral Honors.</p>
+        </article>
+
+      </div>
+    </section>
   </main>
 
   <!-- Global Footer -->
