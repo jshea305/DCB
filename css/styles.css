@@ -310,6 +310,9 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: block;
+      padding: 24px; /* Increases internal spacing around text */
+      margin-bottom: 20px; /* Ensures healthy separation between stacked cards */
+      box-sizing: border-box;
     }
 
     .testimonial-card:hover {
