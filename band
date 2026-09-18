@@ -1,1 +1,75 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title | DownCity Band</title>
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- SEO & Open Graph Tags -->
+  <meta name="description" content="DownCity Band brings high-energy live music to weddings and private events across Rhode Island and New England.">
+  <meta property="og:site_name" content="DOWN CITY BAND">
+  <meta property="og:title" content="DownCity Band | Premier Wedding & Event Band">
+  <meta property="og:description" content="Premier live music entertainment in Providence, RI. High energy, versatile setlists, and packed dance floors.">
+  <meta property="og:image" content="media/logo2_1_orig.png">
+  <meta property="og:url" content="https://www.downcityband.com/">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Global Header & Navigation -->
+  <header>
+    <nav>
+      <div class="nav-logo">DOWNCITY BAND</div>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="band.html">Meet the Band</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="index.html#shows">Upcoming Shows</a></li>
+        <li><a href="index.html#contact">Book Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/downcityband" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="mailto:davidwilson@downcityband.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; DownCity Band. All Rights Reserved. Based in Providence, RI.</p>
+  </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
