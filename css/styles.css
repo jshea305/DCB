@@ -605,3 +605,11 @@
     max-height: 350px;   /* Prevents it from overwhelming taller phones */
   }
 }
+.testimonial-response {
+  margin-top: 1.25rem; /* Adds space above the reply block (after the date) */
+}
+
+.testimonial-response-author {
+  margin-bottom: 0.75rem; /* Adds space below "DOWNCITY BAND'S REPLY:" */
+  font-weight: bold;
+}
