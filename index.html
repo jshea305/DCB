@@ -256,22 +256,25 @@
   <p><a href="tel:4012687385">401-268-7385</a> | <a href="mailto:davidwilson@downcityband.com">davidwilson@downcityband.com</a></p>
   <p>&copy; DownCity Band. All Rights Reserved. Based in Providence, RI.</p>
 </footer>
-<script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+<!-- Down City Band Mobile Navigation Script -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-  if (toggleButton && navLinks) {
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+    if (toggleButton && navLinks) {
+      toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
       });
-    });
-  }
-</script>
+
+      // Close menu when a link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
 </body>
 </html>
