@@ -586,7 +586,7 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 60vh; /* Takes up 60% of viewport height on desktop */
+  height: 100vh; /* Fills full screen height on desktop */
   min-height: 400px;
   overflow: hidden;
 }
