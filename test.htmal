@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DownCity Band | Premier Wedding & Event Band in Providence, RI</title>
+  
+  <!-- SEO & Open Graph Tags -->
+  <meta name="description" content="DownCity Band brings high-energy live music to weddings and private events across Rhode Island and New England. Book our 8-piece ensemble today!">
+  <meta property="og:site_name" content="DOWN CITY BAND">
+  <meta property="og:title" content="DownCity Band | Premier Wedding & Event Band">
+  <meta property="og:description" content="Premier live music entertainment in Providence, RI. High energy, versatile setlists, and packed dance floors for weddings and special events.">
+  <meta property="og:image" content="media/logo2_1_orig.png">
+  <meta property="og:url" content="https://www.downcityband.com/">
 
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-logo">DOWNCITY BAND</div>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="band.html">Meet the Band</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="index.html#shows">Upcoming Shows</a></li>
+        <li><a href="index.html#contact">Book Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-container" id="home">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="media/0915(2).mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Down City Band</h1>
+    </div>
+  </div>
+
+  <section id="home" class="hero">
+    <!-- Main Logo at Top -->
+    <img src="media/logo2_1_orig.jpg" alt="DownCity Band Logo" class="logo-img">
+
+    <!-- Original Slideshow Below Logo -->
+    <div class="hero-slider">
+      <div class="slides">
+        <img src="media/NP-BEST.png" alt="DownCity Band Stage Performance">
+        <img src="media/screenshot-20_orig.png" alt="DownCity Band Stage Performance">
+        <img src="media/screenshot-21_orig.png" alt="DownCity Band Group Selfie">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-section">
+      <h2 class="section-title">About DownCity Band!!</h2>
+      <p class="about-subtitle">DownCity Band brings the energy, talent, and fun to make your wedding unforgettable—one packed dance floor at a time.</p>
+      
+      <div class="about-content">
+        <p><strong>DownCity Band</strong> is a premier live music entertainment service based in Providence, Rhode Island, specializing in unforgettable wedding celebrations. For more than 10 years, our eight-member ensemble—featuring some of the area’s top vocalists and musicians—has been filling dance floors, inspiring sing-alongs, and turning special moments into lifelong memories.</p>
+
+        <!-- Bandmate Image Break 1 -->
+        <div class="band-photo-break">
+          <img src="media/DCBFVOCS1.jpg" alt="DownCity Band Vocalist" class="feature-img">
+        </div>
+
+        <h3>Our Music</h3>
+        <p>From soulful blues and timeless classics to country, hip-hop, pop, and rock anthems, our repertoire spans a wide range of genres to make sure there’s something for everyone. Whether you want elegant instrumentals for your ceremony, a heartfelt first dance, or high-energy hits to keep the party going all night, we’ll deliver the perfect soundtrack for your big day. And if you have a special request, we’re happy to learn new songs to make your celebration uniquely yours.</p>
+
+        <!-- Bandmate Image Break 2 (Guitar & Vocals Duo) -->
+        <div class="band-photo-break">
+          <img src="media/DCBGUITAR3.jpg" alt="DownCity Band Guitarist" class="feature-img">
+        </div>
+
+        <h3>More Than Just a Band</h3>
+        <p>DownCity Band doesn’t just perform—we create an experience. Along with live music, we can provide music during breaks, act as your MC, and ensure that every transition of your celebration flows seamlessly. Our goal is to keep the energy high and your planning stress-free.</p>
+
+        <!-- Bandmate Image Break 3 (Keyboard) -->
+        <div class="band-photo-break">
+          <img src="media/DCBKEYS.jpg" alt="DownCity Band Keyboardist" class="feature-img">
+        </div>
+
+        <h3>Why Couples Love Us</h3>
+        <p>Couples consistently rave about our <strong>enthusiasm, professionalism, and easygoing style</strong>. Planning is simple, communication is clear, and when the big day comes, we bring the energy that gets everyone on the dance floor. It’s no surprise we were named <strong>2019 Best of Newport County</strong>—an honor that reflects both our talent and our commitment to customer service.</p>
+
+        <!-- Bandmate Image Break 4 (Drums & Sax Grid/Row) -->
+        <div class="band-photo-grid">
+          <img src="media/DCBDRUMS1.jpg" alt="DownCity Band Drummer" class="feature-img">
+          <img src="media/DCBSAX1.jpg" alt="DownCity Band Saxophonist" class="feature-img">
+        </div>
+
+        <h3>See Us in Action</h3>
+        <p>Experience the joy and energy we bring to every performance, then imagine that same magic creating unforgettable memories at your own event.</p>
+      </div>
+
+      <!-- Bandmate Image Break 5 (Bass & Guitar Solo) -->
+      <div class="band-photo-grid">
+        <img src="media/DCBBASS1.jpg" alt="DownCity Band Bassist" class="feature-img">
+        <img src="media/DCBGuitar2.jpg" alt="DownCity Band Guitarist Solo" class="feature-img">
+      </div>
+
+      <div class="btn-container">
+        <a href="#contact" class="btn">Book Now!!</a>
+        
+        <a href="https://www.facebook.com/downcityband" target="_blank" class="btn">
+          <img src="Facebook_logo_(square).png" alt="Facebook" class="btn-icon">
+          Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shows Section -->
+  <section id="shows" class="shows-section">
+    <h2 class="section-title">Upcoming Shows</h2>
+    <p class="shows-subtitle">Click on public event names for venue map & details</p>
+
+    <div class="shows-list">
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/5/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/12/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/19/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">9/26/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">10/10/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">11/13/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">11/28/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/ugLJUo5eGC6wLsG87" target="_blank">Ramada by Wyndham Seekonk New Years Eve Party</a></div>
+        </div>
+        <div class="show-date">12/31/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
+        </div>
+        <div class="show-date">11/28/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
+        </div>
+        <div class="show-date">2/27/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
+        </div>
+        <div class="show-date">4/3/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name">Private Function</div>
+        </div>
+        <div class="show-date">4/17/2026</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/JBjmdcYcXq4kcdrG9" target="_blank">Narragansett Cafe</a></div>
+        </div>
+        <div class="show-date">2/27/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A" target="_blank">Narragansett Cafe</a></div>
+        </div>
+        <div class="show-date">5/22/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/fijJwsYVzhnkGMbe9" target="_blank">St. Barnabas festival</a></div>
+        </div>
+        <div class="show-date">6/11/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/tZf7BqBNh5phv7xy7" target="_blank">Tabor Academy</a></div>
+        </div>
+        <div class="show-date">6/12/2027</div>
+      </div>
+
+      <div class="show-item">
+        <div class="show-details">
+          <div class="show-name"><a href="https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A" target="_blank">Narragansett Cafe</a></div>
+        </div>
+        <div class="show-date">7/31/2027</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-section">
+      <h2 class="section-title">Get In Touch</h2>
+      <p>Ready to lock in the music for your date? Reach out to us directly via email below.</p>
+      
+      <div class="contact-email-display">
+        <a href="mailto:davidwilson@downcityband.com" class="email-link"><i class="fas fa-envelope"></i> davidwilson@downcityband.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/downcityband" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="mailto:davidwilson@downcityband.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
+      <a href="tel:4012687385" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+    </div>
+    <p><a href="tel:4012687385">401-268-7385</a> | <a href="mailto:davidwilson@downcityband.com">davidwilson@downcityband.com</a></p>
+    <p>&copy; DownCity Band. All Rights Reserved. Based in Providence, RI.</p>
+  </footer>
+
+  <!-- Down City Band Mobile Navigation Script -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (toggleButton && navLinks) {
+      toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
