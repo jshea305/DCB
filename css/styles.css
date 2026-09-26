@@ -613,3 +613,34 @@
   margin-bottom: 0.75rem; /* Adds space below "DOWNCITY BAND'S REPLY:" */
   font-weight: bold;
 }
+/* Inline Bandmate Image Breaks */
+.band-photo-break {
+  margin: 35px 0;
+  text-align: center;
+}
+
+.band-photo-break img {
+  width: 100%;
+  max-width: 650px;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.band-photo-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+.band-photo-grid img {
+  width: 100%;
+  max-width: 320px;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
