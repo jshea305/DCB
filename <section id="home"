@@ -57,20 +57,19 @@
     </div>
   </div>
   </div>
-  <section id="home" class="hero">
-    <!-- Main Logo at Top -->
-    <img src="media/logo2_1_orig.jpg" alt="DownCity Band Logo" class="logo-img">
+  <section id="slideshow" class="hero">
+  <!-- Main Logo at Top -->
+  <img src="media/logo2_1_orig.jpg" alt="DownCity Band Logo" class="logo-img">
 
-    <!-- Slideshow Below Logo -->
-    <div class="hero-slider">
-      <div class="slides">
-        <img src="media/NP-BEST.png" alt="DownCity Band Stage Performance">
-        <img src="media/screenshot-20_orig.png" alt="DownCity Band Stage Performance">
-        <img src="media/screenshot-21_orig.png" alt="DownCity Band Group Selfie">
-        
-      </div>
+  <!-- Slideshow Below Logo -->
+  <div class="hero-slider">
+    <div class="slides">
+      <img src="media/NP-BEST.png" alt="DownCity Band Stage Performance">
+      <img src="media/screenshot-20_orig.png" alt="DownCity Band Stage Performance">
+      <img src="media/screenshot-21_orig.png" alt="DownCity Band Group Selfie">
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- About Section -->
   <section id="about">
