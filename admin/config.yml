@@ -1,10 +1,10 @@
-local_backend: true
+
 
 backend:
   name: github
   repo: jshea305/DCB
   branch: main
-  base_url: https://decap-bridge.org
+  base_url: https://downcityband.vercel.app
   auth_endpoint: /auth
   
 media_folder: "media"
