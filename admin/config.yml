@@ -5,7 +5,7 @@ backend:
   repo: jshea305/DCB
   branch: main
   base_url: https://downcityband.vercel.app
-  auth_endpoint: /auth
+  auth_endpoint: /api/auth
   
 media_folder: "media"
 public_folder: "media"
