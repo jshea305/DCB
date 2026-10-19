@@ -120,120 +120,29 @@
   <h2 class="section-title">Upcoming Shows</h2>
   <p class="shows-subtitle">Click on public event names for venue map & details</p>
 
-  <div class="shows-list">
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">9/5/2026</div>
-    </div>
+ <div id="shows-container" class="shows-list"></div>
 
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">9/12/2026</div>
-    </div>
+<script>
+  fetch('_data/shows.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('shows-container');
+      container.innerHTML = data.shows.map(show => {
+        const nameHtml = show.map_link 
+          ? `<a href="${show.map_link}" target="_blank">${show.name}</a>`
+          : show.name;
 
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">9/19/2026</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">9/26/2026</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">10/10/2026</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">11/13/2026</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
-      </div>
-      <div class="show-date">11/28/2026</div>
-    </div>
-
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/ugLJUo5eGC6wLsG87" target="_blank">Ramada by Wyndham Seekonk New Years Eve Party</a></div>
-      </div>
-      <div class="show-date">12/31/2026</div>
-    </div>
-
-    
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
-      </div>
-      <div class="show-date">2/27/2027</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/3R6FMaJvTbyL27v89" target="_blank">Hometown Tavern</a></div>
-      </div>
-      <div class="show-date">4/3/2027</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name">Private Function</div>
-      </div>
-      <div class="show-date">4/17/2026</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/JBjmdcYcXq4kcdrG9" target="_blank">Narragansett Cafe</a></div>
-      </div>
-      <div class="show-date">2/27/2027</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A" target="_blank">Narragansett Cafe</a></div>
-      </div>
-      <div class="show-date">5/22/2027</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/fijJwsYVzhnkGMbe9" target="_blank">St. Barnabas festival</a></div>
-      </div>
-      <div class="show-date">6/11/2027</div>
-    </div>
-
-        <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/tZf7BqBNh5phv7xy7" target="_blank">Tabor Academy</a></div>
-      </div>
-      <div class="show-date">6/12/2027</div>
-    </div>
-
-    <div class="show-item">
-      <div class="show-details">
-        <div class="show-name"><a href="https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A" target="_blank">Narragansett Cafe</a></div>
-      </div>
-      <div class="show-date">7/31/2027</div>
-    </div>
+        return `
+          <div class="show-item">
+            <div class="show-details">
+              <div class="show-name">${nameHtml}</div>
+            </div>
+            <div class="show-date">${show.date}</div>
+          </div>
+        `;
+      }).join('');
+    });
+</script>
 </section>
 
  
