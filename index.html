@@ -123,25 +123,26 @@
  <div id="shows-container" class="shows-list"></div>
 
 <script>
-  fetch('_data/shows.json')
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('shows-container');
-      container.innerHTML = data.shows.map(show => {
-        const nameHtml = show.map_link 
-          ? `<a href="${show.map_link}" target="_blank">${show.name}</a>`
-          : show.name;
+ fetch('./_data/shows.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('shows-container');
+    container.innerHTML = data.shows.map(show => {
+      const nameHtml = show.map_link 
+        ? `<a href="${show.map_link}" target="_blank">${show.name}</a>`
+        : show.name;
 
-        return `
-          <div class="show-item">
-            <div class="show-details">
-              <div class="show-name">${nameHtml}</div>
-            </div>
-            <div class="show-date">${show.date}</div>
+      return `
+        <div class="show-item">
+          <div class="show-details">
+            <div class="show-name">${nameHtml}</div>
           </div>
-        `;
-      }).join('');
-    });
+          <div class="show-date">${show.date}</div>
+        </div>
+      `;
+    }).join('');
+  })
+  .catch(err => console.error('Error loading shows:', err));
 </script>
 </section>
 
