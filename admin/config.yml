@@ -1,1 +1,40 @@
+backend:
+  name: github
+  repo: jshea305/DCB
+  branch: main
 
+media_folder: "media"
+public_folder: "media"
+
+collections:
+  - name: "shows"
+    label: "Upcoming Shows"
+    files:
+      - file: "_data/shows.json"
+        label: "Shows List"
+        name: "shows_list"
+        fields:
+          - name: "shows"
+            label: "Shows"
+            widget: "list"
+            fields:
+              - { label: "Venue / Name", name: "name", widget: "string" }
+              - { label: "Date (e.g. 11/28/2026)", name: "date", widget: "string" }
+              - { label: "Google Maps URL (Optional)", name: "map_link", widget: "string", required: false }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - file: "_data/testimonials.json"
+        label: "Testimonials List"
+        name: "testimonials_list"
+        fields:
+          - name: "testimonials"
+            label: "Testimonials"
+            widget: "list"
+            fields:
+              - { label: "Review Title", name: "title", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Band Reply (Optional)", name: "reply", widget: "text", required: false }
