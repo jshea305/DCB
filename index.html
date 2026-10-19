@@ -123,7 +123,7 @@
  <div id="shows-container" class="shows-list"></div>
 
 <script>
- fetch('./_data/shows.json')
+ fetch('./data/shows.json')
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById('shows-container');
