@@ -4,7 +4,7 @@ backend:
   name: github
   repo: jshea305/DCB
   branch: main
-  base_url: https://decap-bridge.vercel.app
+  base_url: https://decap-cms-oauth-provider.vercel.app
   auth_endpoint: /auth
   
 media_folder: "media"
