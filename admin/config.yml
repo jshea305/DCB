@@ -1,12 +1,10 @@
-
-
 backend:
   name: github
   repo: jshea305/DCB
   branch: main
-  base_url: https://downcityband.vercel.app
-  auth_endpoint: /api/auth
-  
+  base_url: https://downcityband.vercel.app/api
+  auth_endpoint: auth
+
 media_folder: "media"
 public_folder: "media"
 
@@ -14,7 +12,7 @@ collections:
   - name: "shows"
     label: "Upcoming Shows"
     files:
-      - file: "_data/shows.json"
+      - file: "data/shows.json"
         label: "Shows List"
         name: "shows_list"
         fields:
@@ -24,12 +22,12 @@ collections:
             fields:
               - { label: "Venue / Name", name: "name", widget: "string" }
               - { label: "Date (e.g. 11/28/2026)", name: "date", widget: "string" }
-              - { label: "Google Maps URL (Optional)", name: "map_link", widget: "string", required: false }
+              - { label: "Google Maps URL (Optional)", name: "map_link", widget: "string" }
 
   - name: "testimonials"
     label: "Testimonials"
     files:
-      - file: "_data/testimonials.json"
+      - file: "data/testimonials.json"
         label: "Testimonials List"
         name: "testimonials_list"
         fields:
@@ -41,4 +39,3 @@ collections:
               - { label: "Quote", name: "quote", widget: "text" }
               - { label: "Author", name: "author", widget: "string" }
               - { label: "Date", name: "date", widget: "string" }
-              - { label: "Band Reply (Optional)", name: "reply", widget: "text", required: false }
