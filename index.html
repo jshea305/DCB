@@ -179,6 +179,19 @@
     })
     .catch(err => console.error('Error loading shows:', err));
 </script>
+
+        return `
+          <div class="show-item">
+            <div class="show-details">
+              <div class="show-name">${nameHtml}</div>
+            </div>
+            <div class="show-date">${show.date}</div>
+          </div>
+        `;
+      }).join('');
+    })
+    .catch(err => console.error('Error loading shows:', err));
+</script>
   .catch(err => console.error('Error loading shows:', err));
 </script>
 </section>
