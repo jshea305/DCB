@@ -146,39 +146,59 @@
 
     <div id="shows-container" class="shows-list"></div>
 
+    <!-- Shows Section -->
+  <section id="shows" class="shows-section">
+    <h2 class="section-title">Upcoming Shows</h2>
+    <p class="shows-subtitle">Click on public event names for venue map &amp; details</p>
+
+    <div id="shows-container" class="shows-list"></div>
+
     <script>
       fetch('./data/shows.json?v=' + Date.now())
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) throw new Error('HTTP status ' + res.status);
+          return res.json();
+        })
         .then(data => {
           const container = document.getElementById('shows-container');
           if (!container) return;
 
-          const shows = Array.isArray(data) ? data : (data.shows || []);
+          // Flatten nested arrays if data came in as [[...]]
+          let shows = Array.isArray(data) ? data.flat(2) : (data.shows || []);
 
-          if (shows.length === 0) {
+          if (!shows || shows.length === 0) {
             container.innerHTML = '<div class="show-item"><div class="show-name">No upcoming public shows currently scheduled.</div></div>';
             return;
           }
 
           container.innerHTML = shows.map(show => {
-            const nameHtml = show.map_link
-              ? `<a href="${show.map_link}" target="_blank" rel="noopener">${show.name}</a>`
-              : show.name;
+            const name = show.name || show.venue || 'Upcoming Gig';
+            const date = show.date || '';
+            const mapLink = show.map_link || show.mapLink || '';
+
+            const nameHtml = mapLink
+              ? `<a href="${mapLink}" target="_blank" rel="noopener">${name}</a>`
+              : name;
 
             return `
               <div class="show-item">
                 <div class="show-details">
                   <div class="show-name">${nameHtml}</div>
                 </div>
-                <div class="show-date">${show.date || ''}</div>
+                <div class="show-date">${date}</div>
               </div>
             `;
           }).join('');
         })
         .catch(err => {
           console.error('Error loading shows:', err);
+          const container = document.getElementById('shows-container');
+          if (container) {
+            container.innerHTML = '<div class="show-item"><div class="show-name" style="color: #f87171;">Unable to load upcoming shows list.</div></div>';
+          }
         });
     </script>
+  </section>
   </section>
 <!-- VIP Fan List Section -->
   <section id="fan-list" style="padding: 3rem 1rem;">
