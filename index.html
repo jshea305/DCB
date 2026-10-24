@@ -139,66 +139,47 @@
 </div>
   </section>
 
-  <!-- Shows Section -->
+<!-- Shows Section -->
 <section id="shows" class="shows-section">
   <h2 class="section-title">Upcoming Shows</h2>
-  <p class="shows-subtitle">Click on public event names for venue map & details</p>
+  <p class="shows-subtitle">Click on public event names for venue map &amp; details</p>
 
- <div id="shows-container" class="shows-list"></div>
+  <div id="shows-container" class="shows-list"></div>
 
+  <script>
+    fetch('./data/shows.json?v=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('shows-container');
+        if (!container) return;
 
-<script>
-  fetch('./data/shows.json?v=' + Date.now())
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('shows-container');
-      if (!container) return;
+        // Handle both raw arrays [...] and object wrapper {"shows": [...]}
+        const shows = Array.isArray(data) ? data : (data.shows || []);
 
-      // Handle both raw arrays [...] and object wrapper {"shows": [...]}
-      const shows = Array.isArray(data) ? data : (data.shows || []);
+        if (shows.length === 0) {
+          container.innerHTML = '<div class="show-item"><div class="show-name">No upcoming public shows currently scheduled.</div></div>';
+          return;
+        }
 
-      if (shows.length === 0) {
-        container.innerHTML = '<div class="show-item"><div class="show-name">No upcoming public shows currently scheduled.</div></div>';
-        return;
-      }
+        container.innerHTML = shows.map(show => {
+          const nameHtml = show.map_link
+            ? `<a href="${show.map_link}" target="_blank" rel="noopener">${show.name}</a>`
+            : show.name;
 
-      container.innerHTML = shows.map(show => {
-        const nameHtml = show.map_link
-          ? `<a href="${show.map_link}" target="_blank" rel="noopener">${show.name}</a>`
-          : show.name;
-
-        return `
-          <div class="show-item">
-            <div class="show-details">
-              <div class="show-name">${nameHtml}</div>
+          return `
+            <div class="show-item">
+              <div class="show-details">
+                <div class="show-name">${nameHtml}</div>
+              </div>
+              <div class="show-date">${show.date}</div>
             </div>
-            <div class="show-date">${show.date}</div>
-          </div>
-        `;
-      }).join('');
-    })
-    .catch(err => console.error('Error loading shows:', err));
-</script>
-
-        return `
-          <div class="show-item">
-            <div class="show-details">
-              <div class="show-name">${nameHtml}</div>
-            </div>
-            <div class="show-date">${show.date}</div>
-          </div>
-        `;
-      }).join('');
-    })
-    .catch(err => console.error('Error loading shows:', err));
-</script>
-  .catch(err => console.error('Error loading shows:', err));
-</script>
+          `;
+        }).join('');
+      })
+      .catch(err => console.error('Error loading shows:', err));
+  </script>
 </section>
-
- 
-
- <!-- VIP Fan List Section -->
+<!-- VIP Fan List Section -->
   <section id="fan-list" style="padding: 3rem 1rem;">
     <div style="max-width: 600px; margin: 0 auto; padding: 2.5rem 1.5rem; background: rgba(46, 18, 45, 0.75); border: 2px solid var(--highlight); border-radius: 16px; text-align: center; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);">
       
