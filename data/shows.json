@@ -1,82 +1,80 @@
- [
-    {
-      "name": "Private Function",
-      "date": "9/5/2026"
-    },
-    {
-      "name": "Private Function",
-      "date": "9/12/2026"
-    },
-    {
-      "name": "Private Function",
-      "date": "9/19/2026"
-    },
-    {
-      "name": "Private Function",
-      "date": "9/26/2026"
-    },
-    {
-      "name": "Private Function",
-      "date": "10/10/2026"
-    },
-    [
+[
+  {
+    "name": "Private Function",
+    "date": "9/5/2026"
+  },
+  {
+    "name": "Private Function",
+    "date": "9/12/2026"
+  },
+  {
+    "name": "Private Function",
+    "date": "9/19/2026"
+  },
+  {
+    "name": "Private Function",
+    "date": "9/26/2026"
+  },
+  {
+    "name": "Private Function",
+    "date": "10/10/2026"
+  },
   {
     "name": "Test Cafe",
     "date": "10/31/2026",
     "map_link": "https://maps.app.goo.gl/mT4aJze74FWZHAc29"
+  },
+  {
+    "name": "Private Function",
+    "date": "11/13/2026"
+  },
+  {
+    "name": "Hometown Tavern",
+    "date": "11/28/2026",
+    "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
+  },
+  {
+    "name": "Ramada by Wyndham Seekonk New Years Eve Party",
+    "date": "12/31/2026",
+    "map_link": "https://maps.app.goo.gl/ugLJUo5eGC6wLsG87"
+  },
+  {
+    "name": "Hometown Tavern",
+    "date": "2/27/2027",
+    "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
+  },
+  {
+    "name": "Hometown Tavern",
+    "date": "4/3/2027",
+    "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
+  },
+  {
+    "name": "Private Function",
+    "date": "4/17/2026"
+  },
+  {
+    "name": "Narragansett Cafe",
+    "date": "2/27/2027",
+    "map_link": "https://maps.app.goo.gl/JBjmdcYcXq4kcdrG9"
+  },
+  {
+    "name": "Narragansett Cafe",
+    "date": "5/22/2027",
+    "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
+  },
+  {
+    "name": "St. Barnabas festival",
+    "date": "6/11/2027",
+    "map_link": "https://maps.app.goo.gl/fijJwsYVzhnkGMbe9"
+  },
+  {
+    "name": "Tabor Academy",
+    "date": "6/12/2027",
+    "map_link": "https://maps.app.goo.gl/tZf7BqBNh5phv7xy7"
+  },
+  {
+    "name": "Narragansett Cafe",
+    "date": "7/31/2027",
+    "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
   }
 ]
-    {
-      "name": "Private Function",
-      "date": "11/13/2026"
-    },
-    {
-      "name": "Hometown Tavern",
-      "date": "11/28/2026",
-      "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
-    },
-    {
-      "name": "Ramada by Wyndham Seekonk New Years Eve Party",
-      "date": "12/31/2026",
-      "map_link": "https://maps.app.goo.gl/ugLJUo5eGC6wLsG87"
-    },
-    {
-      "name": "Hometown Tavern",
-      "date": "2/27/2027",
-      "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
-    },
-    {
-      "name": "Hometown Tavern",
-      "date": "4/3/2027",
-      "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
-    },
-    {
-      "name": "Private Function",
-      "date": "4/17/2026"
-    },
-    {
-      "name": "Narragansett Cafe",
-      "date": "2/27/2027",
-      "map_link": "https://maps.app.goo.gl/JBjmdcYcXq4kcdrG9"
-    },
-    {
-      "name": "Narragansett Cafe",
-      "date": "5/22/2027",
-      "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
-    },
-    {
-      "name": "St. Barnabas festival",
-      "date": "6/11/2027",
-      "map_link": "https://maps.app.goo.gl/fijJwsYVzhnkGMbe9"
-    },
-    {
-      "name": "Tabor Academy",
-      "date": "6/12/2027",
-      "map_link": "https://maps.app.goo.gl/tZf7BqBNh5phv7xy7"
-    },
-    {
-      "name": "Narragansett Cafe",
-      "date": "7/31/2027",
-      "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
-    }
-  ]
