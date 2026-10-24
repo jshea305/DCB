@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DCB - Quick Content Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 p-6 font-sans max-w-3xl mx-auto">
 
+  <h1 class="text-2xl font-bold mb-2 text-amber-400">Down City Band — Quick Data Builder</h1>
+  <p class="text-slate-400 mb-6 text-sm">Add a show below, click Copy, and paste into <code class="text-amber-300">data/shows.json</code>.</p>
+
+  <!-- Form -->
+  <div class="bg-slate-800 p-5 rounded-lg border border-slate-700 space-y-4 mb-6">
+    <div>
+      <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Venue / Event Name</label>
+      <input type="text" id="venue" placeholder="e.g. The Met, Pawtucket RI" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+    </div>
+    
+    <div>
+      <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Date</label>
+      <input type="text" id="date" placeholder="e.g. Saturday, Nov 28, 2026" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+    </div>
+
+    <div>
+      <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Google Maps URL (Optional)</label>
+      <input type="text" id="mapLink" placeholder="https://maps.google.com/..." class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+    </div>
+
+    <button onclick="addShow()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded transition">
+      + Add Show to Output
+    </button>
+  </div>
+
+  <!-- Output Box -->
+  <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 relative">
+    <div class="flex justify-between items-center mb-2">
+      <span class="text-xs uppercase text-slate-500 font-mono">Formatted JSON Output</span>
+      <button onclick="copyOutput()" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1 rounded border border-slate-700">
+        Copy JSON
+      </button>
+    </div>
+    <pre id="jsonOutput" class="text-emerald-400 font-mono text-sm overflow-x-auto p-2 bg-slate-900/50 rounded">[
+  {
+    "name": "Sample Venue",
+    "date": "Saturday, Nov 28, 2026",
+    "map_link": ""
+  }
+]</pre>
+  </div>
+
+  <script>
+    let showsList = [];
+
+    function addShow() {
+      const name = document.getElementById('venue').value.trim();
+      const date = document.getElementById('date').value.trim();
+      const map_link = document.getElementById('mapLink').value.trim();
+
+      if (!name || !date) {
+        alert('Please enter a Venue and Date');
+        return;
+      }
+
+      showsList.push({ name, date, map_link });
+
+      // Format JSON output
+      document.getElementById('jsonOutput').textContent = JSON.stringify(showsList, null, 2);
+
+      // Reset Form
+      document.getElementById('venue').value = '';
+      document.getElementById('date').value = '';
+      document.getElementById('mapLink').value = '';
+    }
+
+    function copyOutput() {
+      const text = document.getElementById('jsonOutput').textContent;
+      navigator.clipboard.writeText(text);
+      alert('Copied to clipboard! Now paste it directly into data/shows.json on GitHub.');
+    }
+  </script>
+</body>
+</html>
