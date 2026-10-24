@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DCB - Quick Content Manager</title>
+  <title>DCB - Quick Data Builder</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-900 text-slate-100 p-6 font-sans max-w-3xl mx-auto">
 
-  <h1 class="text-2xl font-bold mb-2 text-amber-400">Down City Band — Quick Data Builder</h1>
-  <p class="text-slate-400 mb-6 text-sm">Add a show below, click Copy, and paste into <code class="text-amber-300">data/shows.json</code>.</p>
+  <h1 class="text-2xl font-bold mb-1 text-amber-400">Down City Band — Quick Data Builder</h1>
+  <p class="text-slate-400 mb-6 text-sm">Add shows or reviews below, copy the JSON, and paste into GitHub.</p>
 
-  <!-- Form -->
-  <div class="bg-slate-800 p-5 rounded-lg border border-slate-700 space-y-4 mb-6">
+  <!-- Tab Buttons -->
+  <div class="flex gap-2 mb-4">
+    <button id="showsTabBtn" onclick="switchTab('shows')" class="flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition">
+      🎤 Shows Manager
+    </button>
+    <button id="testimonialsTabBtn" onclick="switchTab('testimonials')" class="flex-1 py-2 rounded-lg font-bold bg-slate-800 text-slate-400 border border-slate-700 transition hover:text-white">
+      ⭐ Testimonials Manager
+    </button>
+  </div>
+
+  <!-- SHOWS FORM -->
+  <div id="showsSection" class="bg-slate-800 p-5 rounded-lg border border-slate-700 space-y-4 mb-6">
+    <h2 class="text-sm font-semibold text-amber-300 uppercase tracking-wider">Add Upcoming Show</h2>
     <div>
       <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Venue / Event Name</label>
       <input type="text" id="venue" placeholder="e.g. The Met, Pawtucket RI" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
@@ -20,7 +31,7 @@
     
     <div>
       <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Date</label>
-      <input type="text" id="date" placeholder="e.g. Saturday, Nov 28, 2026" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+      <input type="text" id="showDate" placeholder="e.g. Saturday, Nov 28, 2026" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
     </div>
 
     <div>
@@ -33,15 +44,44 @@
     </button>
   </div>
 
+  <!-- TESTIMONIALS FORM -->
+  <div id="testimonialsSection" class="bg-slate-800 p-5 rounded-lg border border-slate-700 space-y-4 mb-6 hidden">
+    <h2 class="text-sm font-semibold text-amber-300 uppercase tracking-wider">Add Client Review / Testimonial</h2>
+    <div>
+      <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Review Title</label>
+      <input type="text" id="reviewTitle" placeholder="e.g. Unbelievable Wedding Band!" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+    </div>
+
+    <div>
+      <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Quote / Review Content</label>
+      <textarea id="reviewQuote" rows="3" placeholder="Down City Band had everyone on the dance floor all night long..." class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white"></textarea>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Author / Couple Name</label>
+        <input type="text" id="reviewAuthor" placeholder="e.g. Sam & Rachel" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Event Date</label>
+        <input type="text" id="reviewDate" placeholder="e.g. 07/11/2026" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+      </div>
+    </div>
+
+    <button onclick="addTestimonial()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded transition">
+      + Add Review to Output
+    </button>
+  </div>
+
   <!-- Output Box -->
   <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 relative">
     <div class="flex justify-between items-center mb-2">
-      <span class="text-xs uppercase text-slate-500 font-mono">Formatted JSON Output</span>
-      <button onclick="copyOutput()" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1 rounded border border-slate-700">
+      <span id="outputTargetLabel" class="text-xs uppercase text-slate-400 font-mono">Target: data/shows.json</span>
+      <button onclick="copyOutput()" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1 rounded border border-slate-700 font-bold">
         Copy JSON
       </button>
     </div>
-    <pre id="jsonOutput" class="text-emerald-400 font-mono text-sm overflow-x-auto p-2 bg-slate-900/50 rounded">[
+    <pre id="jsonOutput" class="text-emerald-400 font-mono text-sm overflow-x-auto p-3 bg-slate-900/50 rounded border border-slate-800/80">[
   {
     "name": "Sample Venue",
     "date": "Saturday, Nov 28, 2026",
@@ -52,10 +92,37 @@
 
   <script>
     let showsList = [];
+    let testimonialsList = [];
+    let activeTab = 'shows';
+
+    function switchTab(tab) {
+      activeTab = tab;
+      const showsSec = document.getElementById('showsSection');
+      const testSec = document.getElementById('testimonialsSection');
+      const showsBtn = document.getElementById('showsTabBtn');
+      const testBtn = document.getElementById('testimonialsTabBtn');
+      const targetLabel = document.getElementById('outputTargetLabel');
+
+      if (tab === 'shows') {
+        showsSec.classList.remove('hidden');
+        testSec.classList.add('hidden');
+        showsBtn.className = "flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition";
+        testBtn.className = "flex-1 py-2 rounded-lg font-bold bg-slate-800 text-slate-400 border border-slate-700 transition hover:text-white";
+        targetLabel.textContent = "Target: data/shows.json";
+        renderOutput(showsList);
+      } else {
+        showsSec.classList.add('hidden');
+        testSec.classList.remove('hidden');
+        testBtn.className = "flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition";
+        showsBtn.className = "flex-1 py-2 rounded-lg font-bold bg-slate-800 text-slate-400 border border-slate-700 transition hover:text-white";
+        targetLabel.textContent = "Target: data/testimonials.json";
+        renderOutput(testimonialsList);
+      }
+    }
 
     function addShow() {
       const name = document.getElementById('venue').value.trim();
-      const date = document.getElementById('date').value.trim();
+      const date = document.getElementById('showDate').value.trim();
       const map_link = document.getElementById('mapLink').value.trim();
 
       if (!name || !date) {
@@ -64,20 +131,42 @@
       }
 
       showsList.push({ name, date, map_link });
+      renderOutput(showsList);
 
-      // Format JSON output
-      document.getElementById('jsonOutput').textContent = JSON.stringify(showsList, null, 2);
-
-      // Reset Form
       document.getElementById('venue').value = '';
-      document.getElementById('date').value = '';
+      document.getElementById('showDate').value = '';
       document.getElementById('mapLink').value = '';
+    }
+
+    function addTestimonial() {
+      const title = document.getElementById('reviewTitle').value.trim();
+      const quote = document.getElementById('reviewQuote').value.trim();
+      const author = document.getElementById('reviewAuthor').value.trim();
+      const date = document.getElementById('reviewDate').value.trim();
+
+      if (!title || !quote || !author) {
+        alert('Please fill out Title, Quote, and Author');
+        return;
+      }
+
+      testimonialsList.push({ title, quote, author, date });
+      renderOutput(testimonialsList);
+
+      document.getElementById('reviewTitle').value = '';
+      document.getElementById('reviewQuote').value = '';
+      document.getElementById('reviewAuthor').value = '';
+      document.getElementById('reviewDate').value = '';
+    }
+
+    function renderOutput(dataArray) {
+      document.getElementById('jsonOutput').textContent = JSON.stringify(dataArray, null, 2);
     }
 
     function copyOutput() {
       const text = document.getElementById('jsonOutput').textContent;
+      const targetFile = activeTab === 'shows' ? 'data/shows.json' : 'data/testimonials.json';
       navigator.clipboard.writeText(text);
-      alert('Copied to clipboard! Now paste it directly into data/shows.json on GitHub.');
+      alert(`Copied! Paste directly into ${targetFile} on GitHub.`);
     }
   </script>
 </body>
