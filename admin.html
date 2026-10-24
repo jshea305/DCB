@@ -64,8 +64,13 @@
       </div>
       <div>
         <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Event Date</label>
-        <input type="text" id="reviewDate" placeholder="e.g. 07/11/2026" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
+        <input type="text" id="reviewDate" placeholder="e.g. July 14, 2026" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white">
       </div>
+    </div>
+
+    <div>
+      <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">DownCity Band's Reply (Optional)</label>
+      <textarea id="reviewReply" rows="2" placeholder="e.g. Sam and Rachel, thank you for having us on board!..." class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-white"></textarea>
     </div>
 
     <button onclick="addTestimonial()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded transition">
@@ -119,7 +124,7 @@
         testBtn.className = "flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition";
         showsBtn.className = "flex-1 py-2 rounded-lg font-bold bg-slate-800 text-slate-400 border border-slate-700 transition hover:text-white";
         targetLabel.textContent = "Target: data/testimonials.json";
-        document.getElementById('jsonOutput').value = `[\n  {\n    "title": "Unbelievable Wedding Band!",\n    "quote": "Down City Band had everyone on the dance floor all night long...",\n    "author": "Sam & Rachel",\n    "date": "07/11/2026"\n  }\n]`;
+        document.getElementById('jsonOutput').value = `[\n  {\n    "title": "7/11/26 wedding",\n    "quote": "It was an absolute pleasure working with DownCity Band...",\n    "author": "Sam & Rachel",\n    "date": "July 14, 2026",\n    "reply": "Sam and Rachel, thank you for having us on board!"\n  }\n]`;
       }
     }
 
@@ -163,19 +168,26 @@
       const quote = document.getElementById('reviewQuote').value.trim();
       const author = document.getElementById('reviewAuthor').value.trim();
       const date = document.getElementById('reviewDate').value.trim();
+      const reply = document.getElementById('reviewReply').value.trim();
 
       if (!title || !quote || !author) {
         alert('Please fill out Title, Quote, and Author');
         return;
       }
 
-      currentList.push({ title, quote, author, date });
+      const item = { title, quote, author, date };
+      if (reply) {
+        item.reply = reply;
+      }
+
+      currentList.push(item);
       document.getElementById('jsonOutput').value = JSON.stringify(currentList, null, 2);
 
       document.getElementById('reviewTitle').value = '';
       document.getElementById('reviewQuote').value = '';
       document.getElementById('reviewAuthor').value = '';
       document.getElementById('reviewDate').value = '';
+      document.getElementById('reviewReply').value = '';
     }
 
     function clearOutput() {
