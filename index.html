@@ -147,25 +147,38 @@
  <div id="shows-container" class="shows-list"></div>
 
 <script>
- fetch('./data/shows.json')
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('shows-container');
-    container.innerHTML = data.shows.map(show => {
-      const nameHtml = show.map_link 
-        ? `<a href="${show.map_link}" target="_blank">${show.name}</a>`
-        : show.name;
+<script>
+  fetch('./data/shows.json?v=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('shows-container');
+      if (!container) return;
 
-      return `
-        <div class="show-item">
-          <div class="show-details">
-            <div class="show-name">${nameHtml}</div>
+      // Handle both raw arrays [...] and object wrapper {"shows": [...]}
+      const shows = Array.isArray(data) ? data : (data.shows || []);
+
+      if (shows.length === 0) {
+        container.innerHTML = '<div class="show-item"><div class="show-name">No upcoming public shows currently scheduled.</div></div>';
+        return;
+      }
+
+      container.innerHTML = shows.map(show => {
+        const nameHtml = show.map_link
+          ? `<a href="${show.map_link}" target="_blank" rel="noopener">${show.name}</a>`
+          : show.name;
+
+        return `
+          <div class="show-item">
+            <div class="show-details">
+              <div class="show-name">${nameHtml}</div>
+            </div>
+            <div class="show-date">${show.date}</div>
           </div>
-          <div class="show-date">${show.date}</div>
-        </div>
-      `;
-    }).join('');
-  })
+        `;
+      }).join('');
+    })
+    .catch(err => console.error('Error loading shows:', err));
+</script>
   .catch(err => console.error('Error loading shows:', err));
 </script>
 </section>
