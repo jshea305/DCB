@@ -11,7 +11,7 @@
   <h1 class="text-2xl font-bold mb-1 text-amber-400">Down City Band — Quick Data Builder</h1>
   <p class="text-slate-400 mb-6 text-sm">Add shows or reviews below, copy the JSON, and paste into GitHub.</p>
 
-  <!-- Tab Buttons -->
+  <!-- Tab Selector -->
   <div class="flex gap-2 mb-4">
     <button id="showsTabBtn" onclick="switchTab('shows')" class="flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition">
       🎤 Shows Manager
@@ -73,26 +73,29 @@
     </button>
   </div>
 
-  <!-- Output Box -->
+  <!-- JSON Output & Pre-load Box -->
   <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 relative">
     <div class="flex justify-between items-center mb-2">
       <span id="outputTargetLabel" class="text-xs uppercase text-slate-400 font-mono">Target: data/shows.json</span>
-      <button onclick="copyOutput()" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1 rounded border border-slate-700 font-bold">
-        Copy JSON
-      </button>
+      <div class="flex gap-2">
+        <button onclick="clearOutput()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-400 px-3 py-1 rounded border border-slate-700">
+          Clear
+        </button>
+        <button onclick="copyOutput()" class="text-xs bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1 rounded font-bold">
+          Copy JSON
+        </button>
+      </div>
     </div>
-    <pre id="jsonOutput" class="text-emerald-400 font-mono text-sm overflow-x-auto p-3 bg-slate-900/50 rounded border border-slate-800/80">[
+    <textarea id="jsonOutput" rows="10" class="w-full bg-slate-900/50 text-emerald-400 font-mono text-sm p-3 rounded border border-slate-800 focus:outline-none focus:border-amber-500">[
   {
     "name": "Sample Venue",
     "date": "Saturday, Nov 28, 2026",
     "map_link": ""
   }
-]</pre>
+]</textarea>
   </div>
 
   <script>
-    let showsList = [];
-    let testimonialsList = [];
     let activeTab = 'shows';
 
     function switchTab(tab) {
@@ -109,18 +112,32 @@
         showsBtn.className = "flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition";
         testBtn.className = "flex-1 py-2 rounded-lg font-bold bg-slate-800 text-slate-400 border border-slate-700 transition hover:text-white";
         targetLabel.textContent = "Target: data/shows.json";
-        renderOutput(showsList);
+        document.getElementById('jsonOutput').value = `[\n  {\n    "name": "Sample Venue",\n    "date": "Saturday, Nov 28, 2026",\n    "map_link": ""\n  }\n]`;
       } else {
         showsSec.classList.add('hidden');
         testSec.classList.remove('hidden');
         testBtn.className = "flex-1 py-2 rounded-lg font-bold bg-amber-500 text-slate-950 border border-amber-400 transition";
         showsBtn.className = "flex-1 py-2 rounded-lg font-bold bg-slate-800 text-slate-400 border border-slate-700 transition hover:text-white";
         targetLabel.textContent = "Target: data/testimonials.json";
-        renderOutput(testimonialsList);
+        document.getElementById('jsonOutput').value = `[\n  {\n    "title": "Unbelievable Wedding Band!",\n    "quote": "Down City Band had everyone on the dance floor all night long...",\n    "author": "Sam & Rachel",\n    "date": "07/11/2026"\n  }\n]`;
+      }
+    }
+
+    function getCurrentList() {
+      const rawText = document.getElementById('jsonOutput').value.trim();
+      if (!rawText) return [];
+      try {
+        return JSON.parse(rawText);
+      } catch (e) {
+        alert('Invalid JSON in the output box. Please fix or clear it before adding new items.');
+        return null;
       }
     }
 
     function addShow() {
+      const currentList = getCurrentList();
+      if (currentList === null) return;
+
       const name = document.getElementById('venue').value.trim();
       const date = document.getElementById('showDate').value.trim();
       const map_link = document.getElementById('mapLink').value.trim();
@@ -130,8 +147,8 @@
         return;
       }
 
-      showsList.push({ name, date, map_link });
-      renderOutput(showsList);
+      currentList.push({ name, date, map_link });
+      document.getElementById('jsonOutput').value = JSON.stringify(currentList, null, 2);
 
       document.getElementById('venue').value = '';
       document.getElementById('showDate').value = '';
@@ -139,6 +156,9 @@
     }
 
     function addTestimonial() {
+      const currentList = getCurrentList();
+      if (currentList === null) return;
+
       const title = document.getElementById('reviewTitle').value.trim();
       const quote = document.getElementById('reviewQuote').value.trim();
       const author = document.getElementById('reviewAuthor').value.trim();
@@ -149,8 +169,8 @@
         return;
       }
 
-      testimonialsList.push({ title, quote, author, date });
-      renderOutput(testimonialsList);
+      currentList.push({ title, quote, author, date });
+      document.getElementById('jsonOutput').value = JSON.stringify(currentList, null, 2);
 
       document.getElementById('reviewTitle').value = '';
       document.getElementById('reviewQuote').value = '';
@@ -158,12 +178,12 @@
       document.getElementById('reviewDate').value = '';
     }
 
-    function renderOutput(dataArray) {
-      document.getElementById('jsonOutput').textContent = JSON.stringify(dataArray, null, 2);
+    function clearOutput() {
+      document.getElementById('jsonOutput').value = '[]';
     }
 
     function copyOutput() {
-      const text = document.getElementById('jsonOutput').textContent;
+      const text = document.getElementById('jsonOutput').value;
       const targetFile = activeTab === 'shows' ? 'data/shows.json' : 'data/testimonials.json';
       navigator.clipboard.writeText(text);
       alert(`Copied! Paste directly into ${targetFile} on GitHub.`);
