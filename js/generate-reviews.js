@@ -61,8 +61,8 @@ const htmlCards = reviews.map(review => {
 
 let pageHtml = fs.readFileSync(htmlPath, 'utf8');
 
-// Flexible match targeting id="reviews-container" inside <main>
-const containerRegex = /(<main[\s\S]*?id="reviews-container"[\s\S]*?>)([\s\S]*?)(<\/main>)/i;
+// Match <div id="testimonials-container" class="testimonials-grid">...</div>
+const containerRegex = /(<div[^>]*id="testimonials-container"[^>]*>)([\s\S]*?)(<\/div>\s*<\/section>)/i;
 
 if (containerRegex.test(pageHtml)) {
   pageHtml = pageHtml.replace(containerRegex, `$1\n${htmlCards}\n$3`);
