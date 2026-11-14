@@ -1,37 +1,41 @@
 [
- 
-  {
-    "name": "Private Function",
-    "date": "11/13/2026"
-  },
-  {
-    "name": "Hometown Tavern",
+ {  "name": "Hometown Tavern",
     "date": "11/28/2026",
     "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
   },
  {
     "name": "Private Function",
-    "date": "12/12/2026",
-    
+    "date": "12/12/2026"
   },
   {
     "name": "Ramada by Wyndham Seekonk New Years Eve Party",
     "date": "12/31/2026",
     "map_link": "https://maps.app.goo.gl/ugLJUo5eGC6wLsG87"
   },
+ {
+    "name": "Contenders Lounge & Entertainment East Prov.",
+    "date": "1/09/2027",
+    "map_link": "https://maps.app.goo.gl/ZLDSAxjqp9BhuFzC7"
+  },
+
   {
     "name": "Hometown Tavern",
     "date": "2/27/2027",
     "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
   },
-  {
+{
+    "name": "Contenders Lounge & Entertainment East Prov.",
+    "date": "3/19/2027",
+    "map_link": "https://maps.app.goo.gl/ZLDSAxjqp9BhuFzC7"
+  },
+ {
     "name": "Hometown Tavern",
     "date": "4/3/2027",
     "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
   },
   {
     "name": "Private Function",
-    "date": "4/17/2026"
+    "date": "4/17/2027"
   },
   {
     "name": "Narragansett Cafe",
@@ -53,8 +57,36 @@
     "date": "7/31/2027",
     "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
   },
-  {
+{
     "name": "Private Function",
-    "date": "10/22/2027",
+    "date": "8/07/2027"
+   },
+ {
+    "name": "Narragansett Cafe",
+    "date": "8/21/2027",
+    "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
+  },
+{
+    "name": "Narragansett Cafe",
+    "date": "9/18/2027",
+    "map_link": "https://maps.app.goo.gl/7hHv9C2MSpSmVKS2A"
+  },
+ {
+    "name": "Private Function",
+    "date": "10/2/2027"
+  },
+{
+    "name": "Hometown Tavern",
+    "date": "10/09/2027",
+    "map_link": "https://maps.app.goo.gl/3R6FMaJvTbyL27v89"
+  },
+ {
+    "name": "Private Function",
+    "date": "10/22/2027"
+  },
+{
+    "name": "Private Function",
+    "date": "10/24/2027"
   }
 ]
+
