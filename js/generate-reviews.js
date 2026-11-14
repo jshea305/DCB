@@ -5,7 +5,10 @@ const jsonPath = path.join(__dirname, '..', 'data', 'testimonials.json');
 const htmlPath = path.join(__dirname, '..', 'testimonials.html');
 
 const rawData = fs.readFileSync(jsonPath, 'utf8');
-const reviews = JSON.parse(rawData);
+const parsedData = JSON.parse(rawData);
+const reviews = Array.isArray(parsedData)
+  ? parsedData
+  : (parsedData.testimonials || parsedData.reviews || Object.values(parsedData).find(Array.isArray) || []);
 
 // Sort reviews by date (newest on top)
 reviews.sort((a, b) => {
