@@ -1,1 +1,674 @@
-
+{
+  "songs": [
+    {
+      "title": "24K Magic",
+      "artist": "Bruno Mars",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "About Damn Time",
+      "artist": "Lizzo",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Ain't No Messing Around",
+      "artist": "Down City Band",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Ain't No Stopping Us Now",
+      "artist": "McFadden & Whitehead",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Ain't Nobody",
+      "artist": "Chaka Khan",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Ain't Too Proud to Beg",
+      "artist": "The Temptations",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "All About That Bass",
+      "artist": "Meghan Trainor",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "All Night Long",
+      "artist": "Lionel Richie",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "American Boy",
+      "artist": "Estelle ft. Kanye West",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Back in Love Again",
+      "artist": "L.T.D.",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Bad Girls",
+      "artist": "Donna Summer",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Blurred Lines",
+      "artist": "Robin Thicke",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Boogie Oogie Oogie",
+      "artist": "A Taste of Honey",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Brick House",
+      "artist": "Commodores",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "But It's Alright",
+      "artist": "J.J. Jackson",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Cake by the Ocean",
+      "artist": "DNCE",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Can't Stop the Feeling!",
+      "artist": "Justin Timberlake",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Cheap Thrills",
+      "artist": "Sia",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Closer",
+      "artist": "Ne-Yo",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Could You Be Loved",
+      "artist": "Bob Marley",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Crazy",
+      "artist": "Gnarls Barkley",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Crazy in Love",
+      "artist": "Beyoncé",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Don't Start Now",
+      "artist": "Dua Lipa",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Don't Stop Believin'",
+      "artist": "Journey",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Doo Wop (That Thing)",
+      "artist": "Lauryn Hill",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Feels",
+      "artist": "Calvin Harris ft. Pharrell, Katy Perry & Big Sean",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Finesse",
+      "artist": "Bruno Mars",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Forget You",
+      "artist": "CeeLo Green",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Freeze Frame",
+      "artist": "The J. Geils Band",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Get Lucky",
+      "artist": "Daft Punk",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Give It to Me Baby",
+      "artist": "Rick James",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Happy",
+      "artist": "Pharrell Williams",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Havana",
+      "artist": "Camila Cabello",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Hey Mr. D.J.",
+      "artist": "Zhané",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Hey Ya!",
+      "artist": "OutKast",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Hit 'Em Up Style (Oops!)",
+      "artist": "Blu Cantrell",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Hot Hot Hot",
+      "artist": "Buster Poindexter",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "I Feel Good (I Got You)",
+      "artist": "James Brown",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "I Wanna Dance with Somebody",
+      "artist": "Whitney Houston",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "I Will Survive",
+      "artist": "Gloria Gaynor",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "I Wish",
+      "artist": "Stevie Wonder",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "It Takes Two",
+      "artist": "Rob Base & DJ E-Z Rock",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Jump Around",
+      "artist": "House of Pain",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Jungle Love",
+      "artist": "The Time",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Kiss",
+      "artist": "Prince",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Knock on Wood",
+      "artist": "Amii Stewart / Eddie Floyd",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Ladies Night",
+      "artist": "Kool & the Gang",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Lady Marmalade",
+      "artist": "Labelle",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Last Dance",
+      "artist": "Donna Summer",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Let's Get It On",
+      "artist": "Marvin Gaye",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Let's Get Loud",
+      "artist": "Jennifer Lopez",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Let's Groove",
+      "artist": "Earth, Wind & Fire",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Levitating",
+      "artist": "Dua Lipa",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Lil Boo Thang",
+      "artist": "Paul Russell",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Locked Out of Heaven",
+      "artist": "Bruno Mars",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Love Shack",
+      "artist": "The B-52's",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Moves Like Jagger",
+      "artist": "Maroon 5",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Mr. Brightside",
+      "artist": "The Killers",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Mustang Sally",
+      "artist": "Wilson Pickett",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "My Prerogative",
+      "artist": "Bobby Brown",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "No Diggity",
+      "artist": "Blackstreet",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Pink Pony Club",
+      "artist": "Chappell Roan",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Play That Funky Music",
+      "artist": "Wild Cherry",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Poison",
+      "artist": "Bell Biv DeVoe",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Proud Mary",
+      "artist": "Tina Turner",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "P.Y.T. (Pretty Young Thing)",
+      "artist": "Michael Jackson",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Respect",
+      "artist": "Aretha Franklin",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Rock with You",
+      "artist": "Michael Jackson",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Roll with It",
+      "artist": "Steve Winwood",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Rolling in the Deep",
+      "artist": "Adele",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Saturday in the Park",
+      "artist": "Chicago",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "September",
+      "artist": "Earth, Wind & Fire",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Shake It Off",
+      "artist": "Taylor Swift",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Shining Star",
+      "artist": "Earth, Wind & Fire",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Shipping Up to Boston",
+      "artist": "Dropkick Murphys",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Shout",
+      "artist": "The Isley Brothers",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Shut Up and Dance",
+      "artist": "Walk the Moon",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Signed, Sealed, Delivered (I'm Yours)",
+      "artist": "Stevie Wonder",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Sugar",
+      "artist": "Maroon 5",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Suit & Tie",
+      "artist": "Justin Timberlake",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Superstition",
+      "artist": "Stevie Wonder",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "The Power of Love",
+      "artist": "Huey Lewis and the News",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "The Walk",
+      "artist": "Mayer Hawthorne",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "This Is How We Do It",
+      "artist": "Montell Jordan",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Tipsy (A Bar Song)",
+      "artist": "Shaboozey",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Treasure",
+      "artist": "Bruno Mars",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Uptown Funk",
+      "artist": "Mark Ronson ft. Bruno Mars",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "Valerie",
+      "artist": "Amy Winehouse / Bruno Mars",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "We Are Family",
+      "artist": "Sister Sledge",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "What I Like About You",
+      "artist": "The Romantics",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "What Lovers Do",
+      "artist": "Maroon 5",
+      "category": "Dance, Funk & R&B"
+    },
+    {
+      "title": "(You Make Me Feel Like) A Natural Woman",
+      "artist": "Aretha Franklin",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "All of Me",
+      "artist": "John Legend",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "America the Beautiful",
+      "artist": "Ray Charles Arrangement",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "At Last",
+      "artist": "Etta James",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Autumn Leaves",
+      "artist": "Jazz Standard",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Baby, I Love Your Way",
+      "artist": "Peter Frampton / Big Mountain",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Baby I Need Your Loving",
+      "artist": "Four Tops",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Best Part",
+      "artist": "Daniel Caesar & H.E.R.",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Beyond",
+      "artist": "Leon Bridges",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Blue Bossa",
+      "artist": "Jazz Standard",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Can't Help Falling in Love",
+      "artist": "Elvis Presley",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Cantaloupe Island",
+      "artist": "Herbie Hancock",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Days Like This",
+      "artist": "Van Morrison",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Don't Know Why",
+      "artist": "Norah Jones",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Endless Love",
+      "artist": "Lionel Richie & Diana Ross",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Georgia on My Mind",
+      "artist": "Ray Charles",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Have I Told You Lately",
+      "artist": "Van Morrison / Rod Stewart",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "I Choose You",
+      "artist": "Sara Bareilles",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "I Hope You Dance",
+      "artist": "Lee Ann Womack",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "If I Ain't Got You",
+      "artist": "Alicia Keys",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "I'll Be Around",
+      "artist": "The Spinners",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "In My Life",
+      "artist": "The Beatles",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Into the Mystic",
+      "artist": "Van Morrison",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Just the Two of Us",
+      "artist": "Grover Washington Jr. & Bill Withers",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Just the Way You Are",
+      "artist": "Billy Joel",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Let's Stay Together",
+      "artist": "Al Green",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Mercy, Mercy, Mercy",
+      "artist": "Cannonball Adderley",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Mr. Magic",
+      "artist": "Grover Washington Jr.",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "My Girl",
+      "artist": "The Temptations",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Nobody Does It Better",
+      "artist": "Carly Simon",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "One in a Million You",
+      "artist": "Larry Graham",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Perfect",
+      "artist": "Ed Sheeran",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Purple Rain",
+      "artist": "Prince",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Sweet Thing",
+      "artist": "Rufus & Chaka Khan",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "Take the \"A\" Train",
+      "artist": "Duke Ellington",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "That's How Strong My Love Is",
+      "artist": "Otis Redding",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "The Way You Look Tonight",
+      "artist": "Frank Sinatra",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "What's Going On",
+      "artist": "Marvin Gaye",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "You Are the Best Thing",
+      "artist": "Ray LaMontagne",
+      "category": "Dinner, Cocktail & Slow"
+    },
+    {
+      "title": "You Are the Sunshine of My Life",
+      "artist": "Stevie Wonder",
+      "category": "Dinner, Cocktail & Slow"
+    }
+  ]
+}
