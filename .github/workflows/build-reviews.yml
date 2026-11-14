@@ -1,10 +1,11 @@
-name: Pre-render Reviews HTML
+name: Pre-render Reviews & Songs HTML
 
 on:
   workflow_dispatch:
   push:
     paths:
       - 'data/testimonials.json'
+      - 'data/songs.json'
 
 permissions:
   contents: write
@@ -21,11 +22,13 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run review generator
-        run: node js/generate-reviews.js
+      - name: Run static HTML generators
+        run: |
+          node js/generate-reviews.js
+          node js/generate-songs.js
 
       - name: Commit updated HTML
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "auto: pre-render reviews HTML"
-          file_pattern: 'testimonials.html'
+          commit_message: "auto: pre-render reviews and songs HTML"
+          file_pattern: 'testimonials.html songs.html'
