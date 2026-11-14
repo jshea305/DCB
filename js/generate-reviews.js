@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const jsonPath = path.join(__dirname, '..', 'data', 'testimonials.json');
-const htmlPath = path.join(__dirname, '..', 'reviews.html');
+const htmlPath = path.join(__dirname, '..', 'testimonials.html');
 
 const rawData = fs.readFileSync(jsonPath, 'utf8');
 const reviews = JSON.parse(rawData);
