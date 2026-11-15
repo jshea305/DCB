@@ -89,7 +89,7 @@
       text-shadow: 0 0 8px rgba(255,204,0,0.6);
     }
 
-    /* Hero Section */
+/* Hero Section */
     .hero {
       text-align: center;
       padding: 3rem 1rem;
@@ -108,6 +108,18 @@
 
     .hero img.logo-img:hover {
       transform: scale(1.02);
+    }
+
+    .hero-slider {
+      max-width: 800px;
+      height: 450px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 12px;
+      background-color: #000;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 20px rgba(255,100,200,0.15);
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .slides {
@@ -141,7 +153,6 @@
       97%  { transform: translateX(-75%); }
       100% { transform: translateX(0%); }
     }
-
     /* Sections Shared Styles */
     section {
       padding: 4rem 1.5rem;
